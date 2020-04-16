@@ -145,3 +145,4 @@ cython_debug/
 
 # Pycharm artefacts
 .idea/
+data/consolidated_data.csv.zip
