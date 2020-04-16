@@ -141,7 +141,7 @@ cython_debug/
 .DS_Store
 
 # Repo specifics
-/data/consolidated_data.csv
+*.csv
 
 # Pycharm artefacts
 .idea/
