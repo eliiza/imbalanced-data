@@ -136,3 +136,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# Mac specific stuff
+.DS_Store
+
+# Repo specifics
+/data/consolidated_data.csv
