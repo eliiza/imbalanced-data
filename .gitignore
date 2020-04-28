@@ -147,3 +147,5 @@ cython_debug/
 .idea/
 data/consolidated_data.csv.zip
 data/consolidated_data.tar.bz2
+hellinger_distance_criterion.pyx
+hellinger-distance-criterion/
