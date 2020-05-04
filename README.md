@@ -3,6 +3,11 @@
 
 This repository is an auxiliary to my medium blog post on handling imbalanced datasets.  
 The data used for this repository is sourced with gratitude from Daniel Perico's Kaggle entry [earthquakes](https://www.kaggle.com/danielpe/earthquakes).
+The key idea behind this collection is to provide an even playing field to compare a variety of methods to address imabalance - 
+feel free to plug in your own dataset and have a play with the options of the algorithms! It should be fairly easy to change 
+what you need or copy paste to have more comparable elements.  
+
+If you think I've missed an important algorithm or method, please let me know.
 
 ## Installation and requirements
 
@@ -22,7 +27,7 @@ NB:
 
 ## Jupyter Notebooks
 
-The notebooks are standalone examples and can all be executed individually.
+All notebooks are standalone examples and can be executed individually.
 To save resources, variables within the notebooks are reused and redefined for each example shown,
 hence examples can be executed individually or sequentially as a whole.  
 Each model evaluation calculates and prints the precision, recall, ROC, F1 and accuracy scores for the model 
