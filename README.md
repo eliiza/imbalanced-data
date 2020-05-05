@@ -5,7 +5,7 @@ This repository is an auxiliary to my medium blog post on handling imbalanced da
 The data used for this repository is sourced with gratitude from Daniel Perico's Kaggle entry [earthquakes](https://www.kaggle.com/danielpe/earthquakes).
 The key idea behind this collection is to provide an even playing field to compare a variety of methods to address imabalance - 
 feel free to plug in your own dataset and have a play with the options of the algorithms! It should be fairly easy to change 
-what you need or copy paste to have more comparable elements.  
+what you need or copy and paste to have more comparable elements.  
 
 If you think I've missed an important algorithm or method, please let me know.
 
