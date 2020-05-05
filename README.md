@@ -41,11 +41,11 @@ notebooks 9 and 10.
 the amount and type of preprocessing_)
 
 
-### 01 - eda
+### 01 - EDA
 This notebook contains a short exploration of the dataset. Its main focus is to check the dataset for
 an imbalanced class and to examine the missing values and correlations in the dataset.
 
-### 02 - basic, basic_weights, basic_Hellinger
+### 02 - Basic, Basic_weights, Basic_Hellinger
 These notebooks have the same structure, they are all using the dataset straight up without any missing
 values. The basic notebook contains a default Random Forest and, for good measure, a simple default model 
 guessing every event is an earthquake.  
@@ -53,17 +53,56 @@ The basic_weights notebook is the same, but the Random Forest uses balanced clas
 Similarly, the basic_Hellinger notebook uses the Random Forest, but changes the decision criterion to a 
 custom model.
 
-### 03 - imputation
+### 03 - Imputation
 This notebook uses the sklearn iterative imputer to 'salvage' more data from the dataset by filling in 
-missing data values. The scaling and one-hot encoding are applied before the imputation, with the imputation 
-limited to rows that contain fewer than 5 missing values.  
+missing data values. This notebook does not one-hot encode the data due to resource constraints. The imputation 
+is limited to rows that contain fewer than 5 missing values.  
 
-### 04 - knnimputation
+### 04 - Knnimputation
 This notebook is similar to notebook 03, except it uses the sklearn knnimputer. For the sake of time, 
 only rows with fewer than 3 missing values were imputed in this notebook.  
 
-### 05 - undersampling
+### 05 - Undersampling
 This notebook uses a standard Random Forest to model a variety of controlled undersampling and cleaning 
 undersampling methods.
 
+### 06 - Oversampling
+This notebook uses a standard Random Forest to model random undersampling as well as a variety of synthetic
+oversamplers.
 
+### 07 - Combined sampling
+This notebook uses a standard Random Forest to model with two hybrid over- and undersampling methods based
+on SMOTE and the EditedNearestNeighbours and TomekLinks algorithms.
+
+### 08 - Balanced ensembles
+This notebook uses a variety of modelling algorithms with integrated resamplers instead of the standard Random
+Forest while keeping the preprocessing similar to the basic model approach.
+
+### 09 - ANNs
+This notebook uses a simple neural network as a point of comparison to the Random Forest model.  
+To make the modelling comparable, the training contains a cross-validation step and collects the results to
+calculate the average performance of the model.
+
+### 09a - ANNs resampled
+For further comparison, this notebook employs the same neural network as notebook 09 and trains the model on data 
+preprocessed with SMOTE and data preprocessed with random undersampling.
+
+### 10 - Alternative methods
+This notebook applies a different oversampler, a [GAN](https://en.wikipedia.org/wiki/Generative_adversarial_network), 
+to generate synthetic data. It's a very interesting approach that, to my surprise, was the only oversampling/synthetic 
+method that managed to increase the precision of the default model. This could be an interesting approach for  situations
+where precision is the focus, but other tools that successfully increased the precision, like the Hellinger distance
+criterion, are out of reach due to platform constraints or security concerns.  
+It took a bit of hyperparameter tuning to get
+to the result, so a grid search based on the desired metric might be the way to go if the compute is available.  
+The most important aspect to note is that the loss functions are related - the generator's loss is dependent on
+the discriminator's loss. That makes the loss in itself more unreliable as an indicator of performance, hence training
+and evaluation are required to grade the effectiveness of the generator, slowing down the development process. As an example, 
+the generator could show a lower loss after 65 epochs of training that after 165 epochs with other parameter settings, 
+but the data the former generates performs much worse in training the model than the data from the latter.  
+As for which hyperparameters to tune, while the standard deviation of the initialisation had the greatest immediate effect,
+the batch size and learning rates appear to be the most significant factors overall. Especially the ratio of learning rates
+between the discriminator and generator is important here, since the generator depends on the discriminator to improve.
+While the default values have a higher learning rate for the discriminator than the generator, I am not convinced that
+that is a general rule to be followed. Depending on the data and the architecture of discriminator and generator, 
+it might even be useful to slow down the discriminator with respect to the generator.
