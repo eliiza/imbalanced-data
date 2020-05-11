@@ -13,6 +13,15 @@ If you think I've missed an important algorithm or method, please let me know.
 This table shows the results of the examples that were run in the notebooks. The best in each category are highlighted
 in dark grey, the worst in light grey.
 ![Alt Text](https://github.com/eliiza/imbalanced-data/blob/master/Interventions.png "Interventions by type")
+It's important to note that the different algorithms produce very different results, especially the neural networks
+compared to the regular Random Forest. I have not tested for model size, this could play a role in deciding on a model
+candidate since the Random Forest's size will depend on its hyperparameters and the dataset, while the neural network
+will remain fixed.  
+I have included the F1-score as well as the ROC score to show the difference between those with respect to precision
+and recall as well. Examples like NearMiss Version 1 undersampling or the Balanced Ensemble Algorithms show how difficult
+it can be to apply a metric focussed on only the true and false positive rates - seemingly perfect for a classification
+problem!
+
 
 ## Installation and requirements
 
