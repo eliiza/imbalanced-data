@@ -1,7 +1,7 @@
 # Imbalanced Data
 ## Introduction
 
-This repository is an auxiliary to my medium blog post on handling imbalanced datasets.  
+This repository is an auxiliary to my [medium blog post on handling imbalanced datasets](https://medium.com/@eike_germann/modelling-rare-events-c169cb081d8b).  
 The data used for this repository is sourced with gratitude from Daniel Perico's Kaggle entry [earthquakes](https://www.kaggle.com/danielpe/earthquakes).
 The key idea behind this collection is to provide an even playing field to compare a variety of methods to address imabalance - 
 feel free to plug in your own dataset and have a play with the options of the algorithms! It should be fairly easy to change 
