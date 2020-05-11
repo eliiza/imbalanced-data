@@ -7,7 +7,12 @@ The key idea behind this collection is to provide an even playing field to compa
 feel free to plug in your own dataset and have a play with the options of the algorithms! It should be fairly easy to change 
 what you need or copy and paste to have more comparable elements.  
 
-If you think I've missed an important algorithm or method, please let me know.
+If you think I've missed an important algorithm or method, please let me know.  
+
+## Results  
+This table shows the results of the examples that were run in the notebooks. The best in each category are highlighted
+in dark grey, the worst in light grey.
+![Alt Text](https://github.com/eliiza/imbalanced-data/blob/master/Interventions.png "Interventions by type")
 
 ## Installation and requirements
 
