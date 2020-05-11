@@ -43,7 +43,9 @@ the amount and type of preprocessing_)
 
 ### 01 - EDA
 This notebook contains a short exploration of the dataset. Its main focus is to check the dataset for
-an imbalanced class and to examine the missing values and correlations in the dataset.
+an imbalanced class and to examine the missing values and correlations in the dataset.  
+For a detailed explanation of the data types in the columns go to the [US Geological Survey description page](https://earthquake.usgs.gov/earthquakes/feed/v1.0/csv.php).  
+The exploration is rudimentary since there is no feature engineering besides the creation of a binary class.
 
 ### 02 - Basic, Basic_weights, Basic_Hellinger
 These notebooks have the same structure, they are all using the dataset straight up without any missing
