@@ -123,3 +123,9 @@ between the discriminator and generator is important here, since the generator d
 While the default values have a higher learning rate for the discriminator than the generator, I am not convinced that
 that is a general rule to be followed. Depending on the data and the architecture of discriminator and generator, 
 it might even be useful to slow down the discriminator with respect to the generator.
+
+### 11 - Alternative Baselines
+I took all the classifiers I could find from libraries/packages that appear still active (which is why I neglected
+pybrain, Veles and NervanaNeon) and ran them in more or less their default settings on the scaled, one-hot encoded data.  
+Not all classifiers that are included in this notebook appear in the table (such as the Shogun-ML classifiers) because
+for one reason or another I could not obtain results from them.
