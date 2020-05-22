@@ -40,6 +40,13 @@ NB:
 - To run the example using the Hellinger distance criterion in Random Forest, you need to set up the criterion as described in Evgeni Dubov's [github repository](https://github.com/EvgeniDubov/hellinger-distance-criterion).  
 (You might also have to copy the resulting files into your notebook directory to import the module) 
 
+### Additional ML libraries
+
+The non-sklearn classifiers can be found in
+- [xgboost](https://github.com/dmlc/xgboost)
+- [lightGBM](https://github.com/Microsoft/LightGBM)
+- [Shogun](https://www.shogun-toolbox.org/)
+
 ## Jupyter Notebooks
 
 All notebooks are standalone examples and can be executed individually.
