@@ -22,7 +22,7 @@ and recall as well. Examples like NearMiss Version 1 undersampling or the Balanc
 it can be to apply a metric focussed on only the true and false positive rates - seemingly perfect for a classification
 problem!
 
-
+![Alt Text](https://github.com/eliiza/imbalanced-data/blob/master/alternative_algos_results.png "Non-RF classifier result baselines")
 ## Installation and requirements
 
 The csv file containing the unmodified data is assumed to reside in the /data folder.
